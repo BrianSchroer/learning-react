@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!-- Using EJS (http://www.embeddedjs.com/) for conditional rendering: -->
+<% if (htmlWebpackPlugin.options.trackJSToken) { %>
+        <!-- BEGIN TRACKJS -->
+        <script type="text/javascript">window._trackJs = { token: '<%=htmlWebpackPlugin.options.trackJSToken%>' };</script>
+        <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+        <!-- END TRACKJS -->
+<% } %>
+    <meta charset="UTF-8">
+    <!-- Webpack inserts bundled .css file(s) here in the production build -->
+    </head>
+    <body>
+        <h1>Hello, React!</h1>
+    </body>
+    <!-- Webpack inserts bundled .js file(s) here (with embedded .css in dev) -->
+</html>
